@@ -49,6 +49,10 @@ img {
 #Contact {
     background-color: gray;
 }
+.project {
+    flex-basis: 320px;
+    flex: 1;
+}
 .project_header {
     order: 0;
 }

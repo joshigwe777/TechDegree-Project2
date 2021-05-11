@@ -1,70 +1,89 @@
 * {
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
     
 }
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 h1, h2 {
     text-align: center;
+}
+.Port {
+    margin-top: 10px;
 }
 a {
     text-decoration: none;
     color: black;
 }
-img {
-    max-width: 700px;
-    max-height: 400px;
-}
+
 
 #main_nav  {
+    margin-top: 20px;
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    text-align: center;
-
-    
-    
+    text-align: center; 
 }
+
 #main_nav li  {
     margin-bottom: 15px;
     border-style: outset;
-    width: calc(100vw - 2px);
+    width: calc(100vw - 50px);
     align-self: center;
 }
-.wrapper {
+.intro {
     display: flex;
     flex-direction: column;
-    
-
-}
-
-#heading, 
-#intro, 
-#Portfolio,
-.project,
-#Contact {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 5px;
+    text-align: left;
     align-items: center;
-    background-color: white;
+
 }
-#Contact {
-    background-color: gray;
+
+#Portfolio {
+    max-width: 1100px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: beige;
 }
 .project {
-    flex-basis: 320px;
-    flex: 1;
-}
-.project_header {
-    order: 0;
-}
-.project_img {
-    order: -1;
-    max-width: 100vw;
-}
-.project_p {
-    order: 1;
+    margin: 10px;
+    min-height: 250px;
+    color: black;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    text-align: center;
 }
 
+.project img {
+    max-width: 280px;
+    height: 250px;
+}
+
+
+#Contact {
+    background-color: gray;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#Contact p {
+    margin-top: 1rem;
+}
+
+
+
 footer {
+    border-top: solid black 3px;
     display: flex;
     background-color: lightcyan;
     justify-content: space-between;
@@ -76,7 +95,6 @@ footer {
     display: flex;
     align-self: flex-end;
     list-style-type: none;
-    background-color: gray;
 }
 
 #footernav a {
@@ -84,35 +102,69 @@ footer {
 }
 
 
+.small-spacing-left {
+    margin-left: 25px;
+}
 
+.small-spacing-right {
+    margin-right: 25px;
+}
 
-
+.nav {
+    display: none;
+}
 
 
 @media screen and (min-width: 768px) {
-    #intro {
-        flex-direction: row;
-        
-    }
 
-    #intro img, p {
-        flex-grow: 1;
+.intro {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.intro img {
+    order: 1;
+}
+#main_nav {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.small-spacing-right {
+    margin: 0px;
+}
 
-    }
-
-    #Portfolio {
-        height: 1800px;
-        flex-wrap: wrap;
-    }
-
+#Portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
 .project {
-    flex: 1;
+    flex-basis: calc(50% - 20px);
+}
+#back {
+    display: none;
+}
+.nav {
+    display: inline;
 }
 
-
-
 }
+
 
 @media screen and (min-width: 1024px) {
+    #heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #main_nav {
+        width: 25%
+    }
+    
+    
+    .project {
+        flex-basis: calc(33.333% - 20px);
+    }
 
 }

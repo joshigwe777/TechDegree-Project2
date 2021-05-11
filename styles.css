@@ -46,7 +46,6 @@ a {
     margin-bottom: 5px;
     text-align: left;
     align-items: center;
-
 }
 
 #Portfolio {
@@ -161,7 +160,6 @@ footer {
     #main_nav {
         width: 25%
     }
-    
     
     .project {
         flex-basis: calc(33.333% - 20px);
